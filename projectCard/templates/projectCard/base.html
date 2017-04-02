@@ -7,19 +7,37 @@
 	<link href='//fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
 	<link href='//fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
 	{% load static %}
-	<link rel="stylesheet" href="{% static '/css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'projectCard/assets/css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'projectCard/assets/css/roll-in.css' %}">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 	
 </head>
 <body class="home">
+<nav class="navbar navbar-toggleable-md navbar-primary bg-inverse">
+  <button class="navbar-toggler navbar-toggler-right" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">J/M</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto mr-auto">
+      <li class="nav-item active mr-4">
+        <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item mr-4">
+        <a class="nav-link" href="{% url 'project' %}">Projects</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 <main>
 	{% block content %}
 	{% endblock %}
 </main>
 </body>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8= sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7 sha512-U6K1YLIFUWcvuw5ucmMtT9HH4t0uz3M366qrF5y4vnyH6dgDzndlcGvH/Lz5k8NFh80SN95aJ5rqGZEdaQZ7ZQ==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-<script src="{% static '/js/card-depth.js' %}"></script>
 </html>
