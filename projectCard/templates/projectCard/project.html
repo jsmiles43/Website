@@ -1,22 +1,58 @@
 {% extends 'projectCard/base.html' %}
-
+{% load card_extras %}
 {% block title %}<title>Projects</title>{% endblock %}
 
 {% block content %}
-<div class="container">
-	<div class="row rotating-item-wrapper">
-		{% for card in cards %}	
-			<div class="col-md-3 rotating-item">
-				<div class="card card-outline-info mb-3text-center ">
-					<div class="card-block card">
-						<h4 class="card-title">{{ card.name }}</h4>
-						<div class="badge badge-info"></div>
-		   			 		<p>{{ card.description }}</p>
-		   			 		<p>{{ card.card_choice}}: {{ card.code }}</p>
-  						</div>
+	<div class="container">
+		<div class="row rotating-item-wrapper pt-5">
+				<div class="col-md-3 rotating-item">
+					{% for card in cardgroups|group:1 %}
+					<div class="card card-outline-info mb-3 text-center ">
+						<div class="card-block card  font-tit-web">
+							<h4 class="card-title">{{ card.name }}</h4>
+							<div class="badge badge-info"></div>
+			   			 		<p>{{ card.description }}</p>
+			   			 		<p>{{ card.card_choice}}: {{ card.code }}</p>
+	  						</div>
+					</div>
+					{% endfor %}
 				</div>
-			</div>
-		{% endfor %}
-	</div>	
-</div>
+				<div class="col-md-3 rotating-item">
+					{% for card in cardgroups|group:2 %}
+					<div class="card card-outline-info mb-3 text-center ">
+						<div class="card-block card  font-tit-web">
+							<h4 class="card-title">{{ card.name }}</h4>
+							<div class="badge badge-info"></div>
+			   			 		<p>{{ card.description }}</p>
+			   			 		<p>{{ card.card_choice}}: {{ card.code }}</p>
+	  						</div>
+					</div>
+					{% endfor %}
+				</div>
+				<div class="col-md-3 rotating-item">
+					{% for card in cardgroups|group:3 %}
+					<div class="card card-outline-info mb-3 text-center ">
+						<div class="card-block card  font-tit-web">
+							<h4 class="card-title">{{ card.name }}</h4>
+							<div class="badge badge-info"></div>
+			   			 		<p>{{ card.description }}</p>
+			   			 		<p>{{ card.card_choice}}: {{ card.code }}</p>
+	  						</div>
+					</div>
+					{% endfor %}
+				</div>
+				<div class="col-md-3 rotating-item">
+					{% for card in cardgroups|group:4 %}
+					<div class="card card-outline-info mb-3 text-center ">
+						<div class="card-block card  font-tit-web">
+							<h4 class="card-title">{{ card.name }}</h4>
+							<div class="badge badge-info"></div>
+			   			 		<p>{{ card.description }}</p>
+			   			 		<p>{{ card.card_choice}}: {{ card.code }}</p>
+	  						</div>
+					</div>
+					{% endfor %}
+				</div>
+		</div>	
+	</div>
 {% endblock %}

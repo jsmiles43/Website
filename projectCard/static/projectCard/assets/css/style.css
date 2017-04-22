@@ -1,4 +1,6 @@
-
+html, body, main, div.bg {
+	height: 100%;
+}
 
 .resume {
 	margin-left: auto;
@@ -9,4 +11,30 @@
 	-webkit-animation: roll-in-left 0.6s ease-out both;
 	-moz-animation: roll-in-left 0.6s ease-out both;
 	animation: roll-in-left 0.6s ease-out both;
+}
+
+.pt-half {
+	margin-top: 20%;
+}
+
+div.bg {
+	background: url('../img/bg.jpg') center no-repeat;
+	background-size: cover;
+}
+
+.font-white {
+	color: white;
+}
+
+.font-open-sans {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.font-tit-web {
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.resume {
+	color: blue;
+	background-color: black;
 }

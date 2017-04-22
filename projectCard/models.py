@@ -6,7 +6,7 @@ class Card(models.Model):
 	description = models.TextField()
 	code = models.CharField(max_length = 50)
 	url = models.URLField(blank=True, max_length = 50)
-
+	group = models.IntegerField(default = 1)
 	
 
 

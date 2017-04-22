@@ -1,29 +1,27 @@
 {% extends 'projectCard/base.html' %}
-
+{% load static %}
 {% block title %}
-<title>HOME</title>
+<title>JSmiles-Home</title>
 {% endblock %}
 
 {% block content %}
-<div class="container">
+<div class='bg'>
+<div class="container pt-5">
 	<div class="row">
 		<div class="col-md-12">
-			
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-12">
-			<h1 class='text-center'>JOSEPH MILES</h1>
-			<h2 class='text-center'>SOFTWARE ENGINEER</h2>
+			<div class="content-wrapper pt-half">
+				<h1 class='text-center font-open-sans font-white'>JOSEPH MILES</h1>
+				<h2 class='text-center font-open-sans font-white'>SOFTWARE ENGINEER</h2>
+			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-12 text-center">
 			<hr></hr>
-			<button class="btn btn-inverse btn-secondary resume">RESUME</button>
-			<button class="btn btn-inverse btn-secondary resume">CONTACT</button>
+			<a href="{% static 'projectCard/assets/docs/JosephMilesResume3.docx' %}" style="color: white" class="btn btn-primary resume mr-2">RESUME</a>
+			<a style="color: white" class="btn btn-primary resume ml-2">CONTACT</a>
 		</div>
 	</div>
 </div>
-
+</div>
 {% endblock %}

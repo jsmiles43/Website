@@ -9,4 +9,4 @@ def home(request):
 
 def project(request):
 	cards = Card.objects.all()
-	return render(request, 'projectCard/project.html', { 'cards' : cards})
+	return render(request, 'projectCard/project.html', { 'cardgroups' : cards})
