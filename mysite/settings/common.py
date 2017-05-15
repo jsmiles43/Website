@@ -1,3 +1,6 @@
+"""Common settings and globals."""
+
+
 """
 Django settings for mysite project.
 
@@ -23,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '@*g$hh@6tn-bu)o@zwr35mf&98p8e^83p1i)rluw_t*54e)w6j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
 
 ALLOWED_HOSTS = []
 
@@ -74,12 +77,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+
 
 
 # Password validation
@@ -123,3 +121,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     
 ]
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")

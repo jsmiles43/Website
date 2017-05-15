@@ -10,3 +10,6 @@ def home(request):
 def project(request):
 	cards = Card.objects.all()
 	return render(request, 'projectCard/project.html', { 'cardgroups' : cards})
+
+def contact(request):
+	return render(request, 'projectCard/contact.html')
